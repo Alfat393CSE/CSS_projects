@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #363523;
+        }
+
+        .nav-1 {
+            border: 1px solid white;
+            list-style-type: none;
+            background-color: #958AAA;
+        }
+
+        .nav-1 ul{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .nav-1 li{
+            padding: 5px 15px;
+        }
+
+        .nav-1 a{
+            text-decoration: none;
+            color: #363523;
+            font-weight: bolder;
+            position: relative;
+            padding: 5px 15px;
+        }
+
+        .nav-1 a::after{
+            content: "";
+            width: 100%;
+            position: absolute;
+            height: 2px;
+            transform: scaleX(0);
+            transition: transform 0.5s ease-in-out;
+            background-color: #363523;
+            bottom: 0;
+            left: 0;
+        }
+
+        .nav-1 a:hover::after{
+            transform: scaleX(1);
+        }
+
+        .nav-1 .login-btn{
+            background-color: #6C7853;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 10px;
+            color: #44c94f;
+            font-weight: bolder;
+        }
+
+        .nav-1 .login-btn:hover{
+            background-color: #534B43;
+            border: 2px dotted black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-container">
+        <div class="nav-1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <button type="submit" class="login-btn">Login</button>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>
